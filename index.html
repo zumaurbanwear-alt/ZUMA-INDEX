@@ -299,17 +299,18 @@ section{padding:88px 40px;border-bottom:1px solid var(--grey-deep);position:rela
   font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,8vw,110px);
   color:var(--light);line-height:0.9;margin-bottom:52px;
 }
-.lookbook-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;}
+.lookbook-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;}
 .lb-cell{
   background:var(--grey-deep);display:flex;align-items:center;justify-content:center;
-  position:relative;overflow:hidden;
+  position:relative;overflow:hidden;aspect-ratio:3/4;flex:0 0 calc(33.333% - 16px);max-width:calc(33.333% - 16px);
 }
-.lb-cell:nth-child(1){grid-column:span 2;aspect-ratio:3/4;background:#111;}
-.lb-cell:nth-child(2){grid-column:span 2;aspect-ratio:3/4;background:#0e0b0e;}
-.lb-cell:nth-child(3){grid-column:span 2;aspect-ratio:3/4;background:#130a0a;}
-.lb-cell:nth-child(4){grid-column:span 2;aspect-ratio:3/4;background:#0f0f0f;}
-.lb-cell:nth-child(5){grid-column:span 2;aspect-ratio:3/4;background:#100808;}
-.lb-cell:nth-child(6){grid-column:span 2;aspect-ratio:3/4;background:#111;}
+.lb-cell:nth-child(1){background:#111;}
+.lb-cell:nth-child(2){background:#0e0b0e;}
+.lb-cell:nth-child(3){background:#130a0a;}
+.lb-cell:nth-child(4){background:#0f0f0f;}
+.lb-cell:nth-child(5){background:#100808;}
+.lb-cell:nth-child(6){background:#111;}
+.lb-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
 .lb-cross{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:26px;height:26px;}
 .lb-cross::before,.lb-cross::after{content:'';position:absolute;background:var(--crimson-dim);}
 .lb-cross::before{width:1px;height:100%;left:50%;}
@@ -365,6 +366,9 @@ footer{
 .footer-right{text-align:right;position:relative;z-index:2;}
 .footer-right p{font-size:8px;letter-spacing:0.16em;color:var(--grey-text);text-transform:uppercase;line-height:2.2;}
 .footer-right .footer-note{color:var(--crimson-hi);margin-top:12px;}
+.social-links{display:flex;gap:16px;margin-bottom:8px;}
+.social-links a{font-size:8px;letter-spacing:0.16em;color:var(--grey-text);text-transform:uppercase;text-decoration:none;transition:color 0.3s;}
+.social-links a:hover{color:var(--crimson-hi);}
 
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity 0.85s ease,transform 0.85s ease;}
@@ -386,13 +390,8 @@ footer{
   .coll-entry{grid-template-columns:48px 1fr;}
   .coll-desc{grid-column:2;}
   .process-item{grid-template-columns:36px 1fr;gap:16px;}
-  .lookbook-grid{grid-template-columns:repeat(6,1fr);}
-  .lb-cell:nth-child(1){grid-column:span 1;}
-  .lb-cell:nth-child(2){grid-column:span 1;}
-  .lb-cell:nth-child(3){grid-column:span 1;}
-  .lb-cell:nth-child(4){grid-column:span 1;}
-  .lb-cell:nth-child(5){grid-column:span 1;}
-  .lb-cell:nth-child(6){grid-column:span 1;}
+  .lookbook-grid{gap:16px;}
+  .lb-cell{flex:0 0 calc(50% - 8px);max-width:calc(50% - 8px);}
   .hero-side{display:none;}
   .band-label{left:24px;}
   .band-label-r{right:24px;}
@@ -594,12 +593,12 @@ footer{
   </div>
   <h2 class="lookbook-headline reveal reveal-d1">THE RECORD.</h2>
   <div class="lookbook-grid reveal reveal-d2">
-    <div class="lb-cell"><div class="lb-cross"></div><div class="lb-ph">Shoot pending</div><div class="lb-label">Muerted Zephyr</div></div>
-    <div class="lb-cell"><div class="lb-cross"></div><div class="lb-ph">Shoot pending</div><div class="lb-label">Detail</div></div>
-    <div class="lb-cell"><div class="lb-cross"></div><div class="lb-ph">Shoot pending</div><div class="lb-label">The Gaze</div></div>
-    <div class="lb-cell"><div class="lb-cross"></div><div class="lb-ph">Shoot pending</div><div class="lb-label">Motion</div></div>
-    <div class="lb-cell"><div class="lb-cross"></div><div class="lb-ph">Shoot pending</div><div class="lb-label">Editorial</div></div>
-    <div class="lb-cell"><div class="lb-cross"></div><div class="lb-ph">Shoot pending</div><div class="lb-label">Full Look</div></div>
+    <div class="lb-cell"><img class="lb-img" src="images/muerted-zephyr.png" alt="Muerted Zephyr"><div class="lb-label">Muerted Zephyr</div></div>
+    <div class="lb-cell"><img class="lb-img" src="images/front-tee-1.png" alt="Front Tee 1"><div class="lb-label">Front Tee 1</div></div>
+    <div class="lb-cell"><img class="lb-img" src="images/full-look-1.png" alt="Full Look 1"><div class="lb-label">Full Look 1</div></div>
+    <div class="lb-cell"><img class="lb-img" src="THE GAZE 222222.png" alt="The Gaze"><div class="lb-label">The Gaze</div></div>
+    <div class="lb-cell"><img class="lb-img" src="images/front-tee-2.png" alt="Front Tee 2"><div class="lb-label">Front Tee 2</div></div>
+    <div class="lb-cell"><img class="lb-img" src="images/full-look-2.png" alt="Full Look 2"><div class="lb-label">Full Look 2</div></div>
   </div>
 </section>
 
@@ -648,7 +647,11 @@ footer{
     <span>Design Index — All Rights Reserved</span>
   </div>
   <div class="footer-right">
-    <p>@zumaurbanwear</p>
+    <div class="social-links">
+      <a href="https://www.tiktok.com/@zumaurbanwear?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/zumaurbanwear?igsh=MWdtNWJkbHEwOHBhdQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+      <a href="https://wa.me/message/KOH2ZXZY6EPHP1" target="_blank">WhatsApp</a>
+    </div>
     <p class="footer-note">This is not the store.</p>
   </div>
 </footer>
