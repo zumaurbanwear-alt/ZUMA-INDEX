@@ -42,16 +42,20 @@ body::before{
 /* LOADER */
 #loader{
   position:fixed;inset:0;background:var(--black);z-index:9000;
-  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
   transition:opacity 1s ease,visibility 1s ease;
 }
 #loader.hidden{opacity:0;visibility:hidden;}
 .loader-mark{
   font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(52px,12vw,110px);letter-spacing:0.35em;color:var(--light);
-  animation:loader-in 2.2s ease forwards;display:flex;justify-content:center;
+  font-size:clamp(52px,12vw,110px);letter-spacing:0.35em;padding-left:0.4em;color:var(--light);
+  animation:loader-in 2.2s ease forwards;
 }
-.loader-line{height:1px;background:var(--crimson);animation:loader-line 2s ease forwards 0.6s;max-width:100%;margin-top:8px;}
+.loader-line{
+  height:1px;background:var(--crimson);
+  animation:loader-line 2s ease forwards 0.6s;
+  max-width:80vw;width:80vw;
+}
 @keyframes loader-in{0%{opacity:0;letter-spacing:0.7em;}100%{opacity:1;letter-spacing:0.35em;}}
 @keyframes loader-line{0%{width:0;}100%{width:100%;}}
 
