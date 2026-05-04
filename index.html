@@ -413,7 +413,7 @@ footer{
 </div>
 
 <nav>
-  <a class="nav-brand" href="#hero">ZÜMA</a>
+  <a class="nav-brand" href="/">ZÜMA</a>
   <div class="nav-links">
     <a href="#manifesto">Manifesto</a>
     <a href="#design-aesthetic">Design Aesthetic</a>
@@ -663,13 +663,14 @@ footer{
 </footer>
 
 <script>
-  window.addEventListener('load',()=>{
-    setTimeout(()=>document.getElementById('loader').classList.add('hidden'),2400);
+  document.getElementById('loader').style.display = 'flex';
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('loader').classList.add('hidden'), 2400);
   });
-  const obs=new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
-  },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.05, rootMargin: '0px 0px -20px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
