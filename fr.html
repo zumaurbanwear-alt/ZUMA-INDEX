@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
+  <style>
+  body { visibility: hidden; }
+</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ZÜMA — INDEX</title>
@@ -42,7 +45,7 @@ body::before{
 /* LOADER */
 #loader{
   position:fixed;inset:0;background:var(--black);z-index:9000;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
   transition:opacity 1s ease,visibility 1s ease;
 }
 #loader.hidden{opacity:0;visibility:hidden;}
@@ -55,6 +58,7 @@ body::before{
   height:1px;background:var(--crimson);
   animation:loader-line 2s ease forwards 0.6s;
   max-width:80vw;width:80vw;
+  margin-top:0;
 }
 @keyframes loader-in{0%{opacity:0;letter-spacing:0.7em;}100%{opacity:1;letter-spacing:0.35em;}}
 @keyframes loader-line{0%{width:0;}100%{width:100%;}}
@@ -420,7 +424,7 @@ footer{
 <a href="#process">Processus</a>
 <a href="#lookbook">Lookbook</a>
 <a href="#archive">Archive</a>
-<a href="/ZUMAINDEX/" style="color: var(--crimson-hi); margin-top: 4px;">EN</a>
+<a href="fr.html" style="color: var(--crimson-hi); margin-top: 4px;">EN</a>
   </div>
 </nav>
 
@@ -662,13 +666,15 @@ footer{
 </footer>
 
 <script>
-  window.addEventListener('load',()=>{
-    setTimeout(()=>document.getElementById('loader').classList.add('hidden'),2400);
+  document.body.style.visibility = 'visible';
+  document.getElementById('loader').style.display = 'flex';
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('loader').classList.add('hidden'), 2400);
   });
-  const obs=new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
-  },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.05, rootMargin: '0px 0px -20px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
