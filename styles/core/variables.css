@@ -1,0 +1,19 @@
+/* ============================================================
+   DESIGN TOKENS
+   Single source of truth for every colour used across the site.
+   Spacing, type-scale and timing are intentionally expressed as
+   literals (clamp()/px) at their call sites in this codebase —
+   see docs/ARCHITECTURE.md for why they were left untouched.
+   ============================================================ */
+
+:root {
+  --black:       #000000;
+  --off-black:   #000000;
+  --grey-deep:   #1c1c1c;
+  --grey-mid:    #2e2e2e;
+  --grey-text:   #8e8e8e;
+  --light:       #dadada;
+  --crimson:     #6b0f0f;
+  --crimson-dim: #3a0808;
+  --crimson-hi:  #9a1818;
+}

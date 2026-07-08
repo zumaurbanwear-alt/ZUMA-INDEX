@@ -1,0 +1,43 @@
+/* ============================================================
+   MANIFESTO (001)
+   ============================================================ */
+
+#manifesto { background: var(--black); }
+
+.manifesto-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 9vw, 130px);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: var(--light);
+  margin-bottom: 52px;
+}
+.manifesto-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px 72px;
+  max-width: 920px;
+}
+.manifesto-block p {
+  font-size: 11px;
+  line-height: 2.1;
+  color: var(--grey-text);
+  letter-spacing: 0.03em;
+}
+.manifesto-block p strong {
+  color: var(--light);
+  font-weight: 700;
+}
+.manifesto-pull {
+  grid-column: 1 / -1;
+  border-left: 1px solid var(--crimson);
+  padding-left: 28px;
+  margin-top: 8px;
+}
+.manifesto-pull p {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(18px, 2.6vw, 34px);
+  color: var(--light);
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+}
