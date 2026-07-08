@@ -1,0 +1,86 @@
+/* ============================================================
+   FOOTER
+   Site closing band: brand lockup (left) + social links (right)
+   over a crimson gradient wash.
+
+   Note: the legacy stylesheet also defined a `.footer-bg-img`
+   rule (a faint grayscale background photo) that had no matching
+   element in either page's markup, so it never rendered. It has
+   been removed as dead CSS; the source image is preserved at
+   docs/legacy-unused-assets/footer-bg.png in case it's wanted
+   later. See docs/CLEANUP.md.
+   ============================================================ */
+
+footer {
+  padding: 60px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid var(--grey-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-bg-grad {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--crimson-dim) 0%, transparent 55%);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.footer-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 7vw, 72px);
+  letter-spacing: 0.2em;
+  color: var(--light);
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+}
+.footer-brand span {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  color: var(--grey-text);
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: right;
+  position: relative;
+  z-index: 2;
+}
+.footer-right p {
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  color: var(--grey-text);
+  text-transform: uppercase;
+  line-height: 2.2;
+}
+.footer-right .footer-note {
+  color: var(--crimson-hi);
+  margin-top: 12px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.social-links a {
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  color: var(--grey-text);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.social-links a:hover {
+  color: var(--crimson-hi);
+}

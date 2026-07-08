@@ -1,0 +1,83 @@
+/* ============================================================
+   HERO
+   Full-viewport opener: background photo, index number, title,
+   dek, CTA, and the rotated side label.
+   ============================================================ */
+
+#hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 40px 56px;
+  border-bottom: 1px solid var(--grey-deep);
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  background: url('../../assets/images/hero-bg.png') center center/contain no-repeat;
+  background-color: var(--black);
+  opacity: 0;
+  animation: hero-reveal 1.4s ease forwards 2.5s;
+}
+@keyframes hero-reveal {
+  from { opacity: 0; transform: scale(1.04); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+.hero-number {
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  color: var(--crimson-hi);
+  margin-bottom: 14px;
+  opacity: 0;
+  animation: fade-up 0.8s ease forwards 3s;
+}
+.hero-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(11px, 1.4vw, 16px);
+  letter-spacing: 0.35em;
+  color: var(--light);
+  opacity: 0;
+  animation: fade-up 0.8s ease forwards 3.2s;
+}
+.hero-sub {
+  max-width: 340px;
+  font-size: 9px;
+  line-height: 1.95;
+  letter-spacing: 0.04em;
+  color: var(--grey-text);
+  margin-top: 12px;
+  opacity: 0;
+  animation: fade-up 0.8s ease forwards 3.4s;
+  flex: 1;
+}
+.hero-shop-wrapper {
+  opacity: 0;
+  animation: fade-up 0.8s ease forwards 3.4s;
+}
+.hero-side {
+  position: absolute;
+  top: 50%;
+  right: 36px;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: right center;
+  font-size: 7px;
+  letter-spacing: 0.28em;
+  color: var(--grey-deep);
+  text-transform: uppercase;
+  z-index: 2;
+  opacity: 0;
+  animation: fade-up 1s ease forwards 3.5s;
+}

@@ -1,0 +1,56 @@
+/* ============================================================
+   LOOKBOOK (005)
+   Note: `.lb-cross` and `.lb-ph` existed in the legacy stylesheet
+   with no matching markup in either page — removed as dead CSS
+   (see docs/CLEANUP.md).
+   ============================================================ */
+
+#lookbook { background: var(--off-black); }
+
+.lookbook-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(42px, 8vw, 110px);
+  color: var(--light);
+  line-height: 0.9;
+  margin-bottom: 52px;
+}
+.lookbook-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.lb-cell {
+  background: var(--grey-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  flex: 0 0 calc(33.333% - 16px);
+  max-width: calc(33.333% - 16px);
+}
+.lb-cell:nth-child(1) { background: #111; }
+.lb-cell:nth-child(2) { background: #0e0b0e; }
+.lb-cell:nth-child(3) { background: #130a0a; }
+.lb-cell:nth-child(4) { background: #0f0f0f; }
+.lb-cell:nth-child(5) { background: #100808; }
+.lb-cell:nth-child(6) { background: #111; }
+.lb-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.lb-label {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  color: var(--grey-text);
+  text-transform: uppercase;
+}
