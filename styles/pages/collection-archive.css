@@ -1,0 +1,137 @@
+/* ============================================================
+   COLLECTION ARCHIVE
+   Shared layout for every /collections/{drop}/ page. One file
+   serves every archive volume — duplicate the folder, edit the
+   text and drop in real media, this stylesheet never changes.
+   ============================================================ */
+
+/* ---- masthead (replaces the site hero on these pages) ---- */
+#arc-hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 140px 40px 56px;
+  border-bottom: 1px solid var(--grey-deep);
+}
+.arc-hero-eyebrow {
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  color: var(--crimson-hi);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.arc-hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 10vw, 140px);
+  line-height: 0.88;
+  color: var(--light);
+}
+.arc-hero-meta {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: center;
+}
+.arc-hero-meta span {
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+}
+.arc-hero-meta strong {
+  color: var(--light);
+  font-weight: 400;
+}
+
+/* ---- chapter dividers (reuse .texture-band, size only) ---- */
+.arc-chapter-index {
+  font-size: 7px;
+  letter-spacing: 0.24em;
+  color: var(--grey-text);
+  text-transform: uppercase;
+}
+
+/* ---- section chrome ---- */
+.arc-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 6vw, 72px);
+  color: var(--light);
+  line-height: 0.95;
+  margin-bottom: 28px;
+}
+.arc-note {
+  max-width: 620px;
+  font-size: 10px;
+  line-height: 2.1;
+  letter-spacing: 0.03em;
+  color: var(--grey-text);
+  margin-bottom: 32px;
+}
+.arc-note strong { color: var(--light); font-weight: 700; }
+.arc-note--pending {
+  border-left: 1px solid var(--grey-deep);
+  padding-left: 20px;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 8px;
+}
+
+/* Overview intro carries the real collection copy (not a
+   placeholder) so it can be wider / more prominent. */
+.arc-overview {
+  max-width: 760px;
+}
+.arc-overview p {
+  font-size: 11px;
+  line-height: 2.1;
+  letter-spacing: 0.03em;
+  color: var(--grey-text);
+  margin-bottom: 16px;
+}
+.arc-overview p strong { color: var(--light); font-weight: 700; }
+
+/* ---- status / cross-reference block (→ STORE) ---- */
+.arc-status-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 28px 0;
+  border-top: 1px solid var(--grey-deep);
+  border-bottom: 1px solid var(--grey-deep);
+}
+.arc-status-label {
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+}
+.arc-status-label strong {
+  display: block;
+  margin-top: 6px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  color: var(--light);
+}
+
+/* ---- back-to-index footer note ---- */
+.arc-return {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 56px 40px;
+  border-bottom: 1px solid var(--grey-deep);
+}
+.arc-return p {
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+}

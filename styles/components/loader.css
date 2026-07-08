@@ -1,0 +1,48 @@
+/* ============================================================
+   LOADER
+   Full-screen intro splash. Shown until scripts/core/loader.js
+   adds `.hidden` after the window `load` event (+2.4s hold).
+   ============================================================ */
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-mark {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 12vw, 110px);
+  letter-spacing: 0.35em;
+  padding-left: 0.4em;
+  color: var(--light);
+  animation: loader-in 0.6s steps(2) 2;
+}
+.loader-line {
+  height: 1px;
+  background: var(--crimson);
+  animation: loader-line 1.2s linear forwards 0.3s;
+  max-width: 80vw;
+  width: 80vw;
+  margin-top: 0;
+}
+
+@keyframes loader-in {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+@keyframes loader-line {
+  0%   { width: 0; }
+  100% { width: 100%; }
+}

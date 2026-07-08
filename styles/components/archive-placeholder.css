@@ -1,0 +1,99 @@
+/* ============================================================
+   ARCHIVE PLACEHOLDER
+   Reusable "to be filled" tile used across every visual section
+   of a Collection Archive page (Moodboards, Sketches, Lookbook,
+   Campaign, etc). Deliberately contains no imagery — it states
+   the recommended aspect ratio and the suggested content so the
+   owner can drop the real file in later with zero further
+   styling work. No stock photos, no lorem ipsum, ever.
+   ============================================================ */
+
+.archive-placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--ph-cols, 3), 1fr);
+  gap: 16px;
+}
+
+.archive-placeholder {
+  position: relative;
+  aspect-ratio: var(--ph-ratio, 4 / 5);
+  border: 1px solid var(--grey-deep);
+  background: var(--off-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px;
+  overflow: hidden;
+  transition: border-color 0.4s;
+}
+.archive-placeholder:hover { border-color: var(--grey-mid); }
+
+/* Center crosshair mark — echoes .band-cross so an "empty" tile
+   still reads as an intentional archive object, not a bug. */
+.archive-placeholder::before,
+.archive-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--grey-deep);
+}
+.archive-placeholder::before { width: 1px;  height: 22px; transform: translate(-50%, -50%); }
+.archive-placeholder::after  { width: 22px; height: 1px;  transform: translate(-50%, -50%); }
+
+.ph-meta {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+.ph-ratio {
+  font-size: 7px;
+  letter-spacing: 0.18em;
+  color: var(--grey-text);
+  text-transform: uppercase;
+}
+.ph-suggested {
+  position: relative;
+  z-index: 2;
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  color: var(--crimson-hi);
+  text-transform: uppercase;
+  line-height: 1.7;
+}
+.ph-suggested span {
+  display: block;
+  color: var(--grey-text);
+}
+
+/* Text-only variant for Archive References / Related Documents —
+   a document row rather than an image tile. */
+.archive-doc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--grey-deep);
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  color: var(--grey-text);
+}
+.archive-doc-row:last-child { border-bottom: 1px solid var(--grey-deep); }
+.archive-doc-row .doc-id {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--light);
+  flex-shrink: 0;
+  width: 64px;
+}
+.archive-doc-row .doc-title { flex: 1; }
+.archive-doc-row .doc-status {
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+  flex-shrink: 0;
+}

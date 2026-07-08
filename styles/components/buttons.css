@@ -1,0 +1,55 @@
+/* ============================================================
+   BUTTONS
+   Keeps its original class name to avoid touching HTML/DOM
+   output — see docs/ARCHITECTURE.md ("Why class names were not
+   renamed to BEM"). Note: a duplicate `.footer-shop-btn` rule
+   existed in the legacy stylesheet but had no matching element
+   in either page — removed as dead CSS (see docs/CLEANUP.md).
+   ============================================================ */
+
+.hero-shop-btn {
+  display: inline-block;
+  font-size: 7px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border: 1px solid var(--crimson);
+  color: var(--crimson-hi);
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+.hero-shop-btn:hover {
+  background: var(--crimson);
+  color: var(--black);
+}
+
+/* ------------------------------------------------------------
+   LINK-BTN
+   Generic version of the same visual treatment, used anywhere
+   an inline "go to X" reference is needed outside the hero:
+   Collections → Open Archive, Archive table → Open Archive,
+   Collection Archive → View Object (Store), → Back to Index.
+   ------------------------------------------------------------ */
+.link-btn {
+  display: inline-block;
+  font-size: 7px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border: 1px solid var(--crimson);
+  color: var(--crimson-hi);
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+.link-btn:hover {
+  background: var(--crimson);
+  color: var(--black);
+}
+/* Unreleased / not-yet-open reference — same shape, inert */
+.link-btn--muted {
+  border-color: var(--grey-deep);
+  color: var(--grey-text);
+  pointer-events: none;
+}

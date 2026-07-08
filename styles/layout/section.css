@@ -1,0 +1,31 @@
+/* ============================================================
+   SECTION BASE
+   Shared chrome for every <section>: consistent padding, bottom
+   rule, and the "number / tag" meta row used at the top of each.
+   ============================================================ */
+
+section {
+  padding: 88px 40px;
+  border-bottom: 1px solid var(--grey-deep);
+  position: relative;
+}
+
+.section-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 52px;
+}
+.section-num {
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  color: var(--crimson-hi);
+  text-transform: uppercase;
+}
+.section-tag {
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  color: var(--grey-text);
+  text-transform: uppercase;
+  text-align: right;
+}

@@ -1,0 +1,46 @@
+/* ============================================================
+   PROCESS (004) + FOUNDATIONAL RECORD (004.5)
+   The "Foundational Record" section re-uses these same
+   .process-* classes rather than declaring its own — that's a
+   trait of the original markup, preserved as-is.
+   ============================================================ */
+
+#process { background: var(--black); }
+
+.process-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(42px, 8vw, 110px);
+  color: var(--light);
+  line-height: 0.9;
+  margin-bottom: 52px;
+}
+.process-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 32px;
+  padding: 34px 0;
+  border-top: 1px solid var(--grey-deep);
+  transition: border-color 0.4s;
+}
+.process-item:hover { border-color: var(--grey-mid); }
+.process-item-num {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--crimson-hi);
+  padding-top: 3px;
+}
+.process-item-body h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.12em;
+  color: var(--light);
+  margin-bottom: 10px;
+}
+.process-item-body p {
+  font-size: 10px;
+  line-height: 2.1;
+  color: var(--grey-text);
+  max-width: 520px;
+  letter-spacing: 0.03em;
+}
+.process-item-body p strong { color: var(--light); font-weight: 700; }

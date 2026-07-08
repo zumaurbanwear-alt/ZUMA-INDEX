@@ -1,0 +1,34 @@
+/* ============================================================
+   DESIGN AESTHETIC (002)
+   Tile grid lives here; the individual `.da-cell` tile styling
+   is in components/cards.css.
+   ============================================================ */
+
+#design-aesthetic { background: var(--black); }
+
+.da-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(42px, 8vw, 110px);
+  color: var(--light);
+  line-height: 0.9;
+  margin-bottom: 52px;
+}
+.da-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--grey-deep);
+  border: 1px solid var(--grey-deep);
+  margin-bottom: 64px;
+}
+.da-statement p {
+  font-size: 11px;
+  line-height: 2.1;
+  color: var(--grey-text);
+  max-width: 580px;
+  letter-spacing: 0.03em;
+}
+.da-statement p strong {
+  color: var(--light);
+  font-weight: 700;
+}
