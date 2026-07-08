@@ -1,41 +1,203 @@
-# ZÜMA — INDEX
+# ZÜMA INDEX
 
-Editorial / archive-style landing page for ZÜMA. Static site, no build
-step required — open `index.html` (or serve the folder) directly.
+Official archive of ZÜMA.
 
-- `index.html` — English homepage
-- `fr.html` — Français homepage
-- `collections/00X-name/` — one Collection Archive page per drop,
-  linked from the homepage's Collections section and Archive table
-- `templates/collection-archive/` — the master template; duplicate
-  this folder to publish a new collection (see
-  `docs/ARCHITECTURE.md` → "Collection Archives")
+INDEX is not a portfolio.
 
-## Structure
+INDEX is not a blog.
 
-See `docs/ARCHITECTURE.md` for the full breakdown of `styles/`,
-`scripts/`, and `assets/`, plus the reasoning behind every refactor
-decision. See `docs/CLEANUP.md` for the list of dead code removed.
+INDEX is not a commercial website.
 
-## Local development
+It is the documentation system of the brand.
 
-No dependencies, no bundler. Any static file server works, e.g.:
+---
 
-```
-python3 -m http.server 8000
-```
+## Philosophy
 
-Then visit `http://localhost:8000/index.html`.
+The Foundational Record defines.
 
-## Known gap
+The Index organizes.
 
-The IPSEITY archive page (`collections/001-ipseity/`) references six
-product photos (`images/muerted-zephyr.png`, `images/front-tee-1.png`,
-`images/full-look-1.png`, `THE GAZE 222222.png`,
-`images/front-tee-2.png`, `images/full-look-2.png`) that were not
-included in the source project this refactor was built from. Drop the
-real files in at those paths (relative to the site root) to fill the
-grid — everything else is already wired up correctly. Every other
-Collection Archive section is an intentional placeholder (see
-`styles/components/archive-placeholder.css`) — that's by design, not
-a gap: the owner fills those in manually per the brief.
+Collection Archives document.
+
+The Store distributes.
+
+Every website has one responsibility.
+
+---
+
+## Architecture
+
+Homepage
+
+↓
+
+Foundational Record
+
+↓
+
+Collections
+
+↓
+
+Collection Archive
+
+↓
+
+Store
+
+---
+
+## Homepage
+
+The homepage is intentionally restrained.
+
+It introduces the archive.
+
+It should never become a gallery.
+
+It references documents.
+
+It does not contain every document.
+
+---
+
+## Collection Archives
+
+Each collection has its own archive.
+
+Example
+
+Collection
+
+IPSEITY
+
+Inside every archive
+
+Overview
+
+Concept
+
+Research
+
+Moodboards
+
+Visual References
+
+Field Notes
+
+Notebook
+
+Sketches
+
+Rejected Concepts
+
+Materials
+
+Prototype Evolution
+
+Workspace
+
+Production
+
+Lookbook
+
+Campaign
+
+Packaging
+
+Final Objects
+
+Archive References
+
+---
+
+## Relationship with Store
+
+INDEX documents.
+
+STORE distributes.
+
+INDEX should link to released products.
+
+STORE should link back to the archive.
+
+Neither replaces the other.
+
+---
+
+## Tech Stack
+
+HTML
+
+CSS
+
+JavaScript
+
+GitHub Pages
+
+---
+
+## Deployment
+
+Repository
+
+GitHub
+
+Hosting
+
+GitHub Pages
+
+URL
+
+https://zumaurbanwear-alt.github.io/ZUMA-INDEX/
+
+---
+
+## Favicons & PWA
+
+favicon.ico
+
+apple-touch-icon.png
+
+android-chrome-192x192.png
+
+android-chrome-512x512.png
+
+site.webmanifest
+
+Open Graph configured.
+
+Twitter/X metadata configured.
+
+Standalone mode enabled.
+
+---
+
+## Future Collections
+
+New collections should be added by duplicating an existing archive folder.
+
+The homepage should never require structural modifications.
+
+The archive is designed to grow indefinitely.
+
+---
+
+## Rules
+
+Do not sell.
+
+Do not add prices.
+
+Do not explain everything.
+
+Show evidence.
+
+Document the work.
+
+Preserve the archive.
+
+---
+
+© ZÜMA
