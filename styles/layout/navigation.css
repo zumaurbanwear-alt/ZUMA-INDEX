@@ -22,7 +22,7 @@ nav {
   color: var(--light);
   text-decoration: none;
   opacity: 0;
-  animation: fade-up 0.2s linear forwards 1.8s;
+  animation: fade-up 0.2s linear forwards 0.3s;
 }
 
 .nav-links {
