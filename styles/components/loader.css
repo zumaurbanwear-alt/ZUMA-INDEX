@@ -1,0 +1,18 @@
+/* ============================================================
+   LOADER
+   Brief full-screen fade masking initial paint/font settle.
+   Shown until scripts/core/loader.js adds `.hidden` right after
+   the window `load` event.
+   ============================================================ */
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  z-index: 9000;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+#loader.hidden {
+  opacity: 0;
+}
