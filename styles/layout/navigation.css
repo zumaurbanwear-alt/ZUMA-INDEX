@@ -31,7 +31,7 @@ nav {
   align-items: flex-end;
   gap: 5px;
   opacity: 0;
-  animation: fade-up 0.2s linear forwards 2s;
+  animation: fade-up 0.2s linear forwards 0.35s;
 }
 .nav-links a {
   font-size: 8px;
