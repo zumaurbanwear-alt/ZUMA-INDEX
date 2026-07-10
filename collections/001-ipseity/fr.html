@@ -1,448 +1,326 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!--
-    ARCHIVE DE COLLECTION — MODÈLE MAÎTRE
-    ============================================================
-    To publish a new collection:
-    1. Duplicate this whole folder: templates/collection-archive/
-       → collections/00X-name/
-    2. Edit only the bracketed [PLACEHOLDER] text and the
-       .archive-placeholder tiles (swap the <div> for an <img>
-       once real media exists — see comment above each grid).
-    3. Add one row to the homepage's #collections section and
-       #archive table linking to collections/00X-name/index.html
-       (and fr.html). No other homepage change is required.
-    Nothing else on this page should need to change: layout,
-    tokens, animations and nav are shared with the rest of the
-    site via the same stylesheets.
-    ============================================================
-  -->
-  <style>body{visibility:hidden;}</style>
+<!--
+ARCHIVE DE COLLECTION — MODÈLE MAÎTRE
+============================================================
+To publish a new collection:
+1. Duplicate this whole folder: templates/collection-archive/
+   → collections/00X-name/
+2. Edit only the bracketed [PLACEHOLDER] text and the
+   .archive-placeholder tiles (swap the <div> for an <img>
+   once real media exists — see comment above each grid).
+3. Add one row to the homepage's #collections section and
+   #archive table linking to collections/00X-name/index.html
+   (and fr.html). No other homepage change is required.
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZÜMA — INDEX / IPSEITY</title>
-  <link rel="icon" type="image/png" href="../../assets/logos/android-chrome-512x512.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="../../styles/core/reset.css">
-  <link rel="stylesheet" href="../../styles/core/variables.css">
-  <link rel="stylesheet" href="../../styles/core/globals.css">
-  <link rel="stylesheet" href="../../styles/core/typography.css">
-
-  <link rel="stylesheet" href="../../styles/layout/navigation.css">
-  <link rel="stylesheet" href="../../styles/layout/section.css">
-  <link rel="stylesheet" href="../../styles/layout/footer.css">
-
-  <link rel="stylesheet" href="../../styles/components/loader.css">
-  <link rel="stylesheet" href="../../styles/components/buttons.css">
-  <link rel="stylesheet" href="../../styles/components/texture-bands.css">
-  <link rel="stylesheet" href="../../styles/components/archive-placeholder.css">
-
-  <link rel="stylesheet" href="../../styles/animations/keyframes.css">
-  <link rel="stylesheet" href="../../styles/animations/reveal.css">
-
-  <link rel="stylesheet" href="../../styles/pages/collection-archive.css">
-  <link rel="stylesheet" href="../../styles/pages/lookbook.css">
-
-  <link rel="stylesheet" href="../../styles/layout/responsive.css">
+Nothing else on this page should need to change: layout,
+tokens, animations and nav are shared with the rest of the
+site via the same stylesheets.
+============================================================
+-->
+<style>body{visibility:hidden;}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZÜMA — INDEX / IPSEITY</title>
+<link rel="icon" type="image/png" href="../../assets/logos/android-chrome-512x512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles/core/reset.css">
+<link rel="stylesheet" href="../../styles/core/variables.css">
+<link rel="stylesheet" href="../../styles/core/globals.css">
+<link rel="stylesheet" href="../../styles/core/typography.css">
+<link rel="stylesheet" href="../../styles/layout/navigation.css">
+<link rel="stylesheet" href="../../styles/layout/section.css">
+<link rel="stylesheet" href="../../styles/layout/footer.css">
+<link rel="stylesheet" href="../../styles/components/loader.css">
+<link rel="stylesheet" href="../../styles/components/buttons.css">
+<link rel="stylesheet" href="../../styles/components/texture-bands.css">
+<link rel="stylesheet" href="../../styles/components/archive-placeholder.css">
+<link rel="stylesheet" href="../../styles/animations/keyframes.css">
+<link rel="stylesheet" href="../../styles/animations/reveal.css">
+<link rel="stylesheet" href="../../styles/pages/collection-archive.css">
+<link rel="stylesheet" href="../../styles/pages/lookbook.css">
+<link rel="stylesheet" href="../../styles/layout/responsive.css">
 </head>
 <body>
-
 <div id="loader"></div>
-
 <header>
-  <nav>
-    <a class="nav-brand" href="../../index.html">ZÜMA</a>
-    <div class="nav-links">
-      <a href="../../index.html#collections">Index</a>
-      <a href="#overview">Aperçu</a>
-      <a href="#research">Recherche</a>
-      <a href="#construction">Construction</a>
-      <a href="#release">Sortie</a>
-      <a href="#references">Références</a>
-    </div>
-  </nav>
+<nav>
+<a class="nav-brand" href="../../index.html">ZÜMA</a>
+<div class="nav-links">
+<a href="../../index.html#collections">Index</a>
+<a href="#overview">Aperçu</a>
+<a href="#research">Recherche</a>
+<a href="#construction">Construction</a>
+<a href="#release">Sortie</a>
+<a href="#references">Références</a>
+</div>
+</nav>
 </header>
-
 <main>
 
-  <!-- ====================================================== -->
-  <!-- ARCHIVE MASTHEAD -->
-  <!-- ====================================================== -->
-  <section id="arc-hero">
-    <div class="arc-hero-eyebrow">Archive de Collection — Drop 001</div>
-    <h1 class="arc-hero-title">IPSEITY</h1>
-    <div class="arc-hero-meta">
-      <span>Année — <strong>2026</strong></span>
-      <span>Origine — <strong>Casablanca</strong></span>
-      <span>Pièces — <strong>2</strong></span>
-      <span>Statut — <strong>En ligne</strong></span>
-    </div>
-  </section>
+<!-- ====================================================== -->
+<!-- ARCHIVE MASTHEAD -->
+<!-- ====================================================== -->
+<section id="arc-hero">
+<div class="arc-hero-eyebrow">Archive de Collection — Drop 001</div>
+<h1 class="arc-hero-title">IPSEITY</h1>
+<div class="arc-hero-meta">
+<span>Année — <strong>2026</strong></span>
+<span>Origine — <strong>Casablanca</strong></span>
+<span>Pièces — <strong>2</strong></span>
+<span>Statut — <strong>En ligne</strong></span>
+</div>
+</section>
 
-  <!-- BAND — chapter 1 -->
-  <div class="texture-band texture-band--mid tx-shadow reveal">
-    <div class="band-ghost band-ghost--center">OVERVIEW</div>
-    <div class="band-cross"></div>
-    <div class="band-label">Chapitre I — Aperçu</div>
-    <div class="band-label-r">↓ Aperçu</div>
-  </div>
+<!-- BAND — chapter 1 -->
+<div class="texture-band texture-band--mid tx-shadow reveal">
+<div class="band-ghost band-ghost--center">OVERVIEW</div>
+<div class="band-cross"></div>
+<div class="band-label">Chapitre I — Aperçu</div>
+<div class="band-label-r">↓ Aperçu</div>
+</div>
 
-  <!-- ====================================================== -->
-  <!-- 01 — OVERVIEW -->
-  <!-- ====================================================== -->
-  <section id="overview">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">01 — Aperçu</span>
-      <span class="section-tag">Ce qu'est cette entrée</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">APERÇU.</h2>
-    <div class="arc-overview reveal reveal-d2">
-      <p>IPSEITY — deux entrées, chacune documentant une approche distincte du même axiome : l'identité persiste indépendamment de l'observation.</p>
-      <p>Classification : Vêtement. Origine : Casablanca. Statut : Vérifié.</p>
-    </div>
-  </section>
+<!-- ====================================================== -->
+<!-- 01 — OVERVIEW -->
+<!-- ====================================================== -->
+<section id="overview">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">01 — Aperçu</span>
+<span class="section-tag">Ce qu'est cette entrée</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">APERÇU.</h2>
+<div class="arc-overview reveal reveal-d2">
+<p>IPSEITY — deux entrées, chacune documentant une approche distincte du même axiome : l'identité persiste indépendamment de l'observation.</p>
+<p>Classification : Vêtement. Origine : Casablanca. Statut : Vérifié.</p>
+</div>
+</section>
 
-  <!-- ====================================================== -->
-  <!-- 02 — CONCEPT -->
-  <!-- ====================================================== -->
-  <section id="concept">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">02 — Concept</span>
-      <span class="section-tag">La question derrière</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">CONCEPT.</h2>
-    <p class="arc-note reveal reveal-d2">[Placeholder — déclaration de concept à ajouter manuellement. Ce qui est dit, à qui, et ce qui doit rester non dit.]</p>
-  </section>
+<!-- ====================================================== -->
+<!-- 02 — CONCEPT -->
+<!-- ====================================================== -->
+<section id="concept">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">02 — Concept</span>
+<span class="section-tag">La question derrière</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">CONCEPT.</h2>
+<p class="arc-note reveal reveal-d2">[Placeholder — déclaration de concept à ajouter manuellement. Ce qui est dit, à qui, et ce qui doit rester non dit.]</p>
+</section>
 
-  <!-- BAND — chapter 2 -->
-  <div class="texture-band texture-band--mid tx-shadow reveal">
-    <div class="band-ghost band-ghost--center">RESEARCH</div>
-    <div class="band-cross"></div>
-    <div class="band-label">Chapitre II — Recherche &amp; Développement</div>
-    <div class="band-label-r">↓ Recherche</div>
-  </div>
+<!-- BAND — chapter 2 -->
+<div class="texture-band texture-band--mid tx-shadow reveal">
+<div class="band-ghost band-ghost--center">RESEARCH</div>
+<div class="band-cross"></div>
+<div class="band-label">Chapitre II — Recherche &amp; Développement</div>
+<div class="band-label-r">↓ Recherche</div>
+</div>
 
-  <!-- ====================================================== -->
-  <!-- 03 — RESEARCH -->
-  <!-- ====================================================== -->
-  <section id="research">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">03 — Recherche</span>
-      <span class="section-tag">Où cela a commencé</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">RECHERCHE.</h2>
-    <p class="arc-note reveal">[Placeholder — résumé de recherche à ajouter manuellement.]</p>
-  </section>
+<!-- ====================================================== -->
+<!-- 03 — RESEARCH -->
+<!-- ====================================================== -->
+<section id="research">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">03 — Recherche</span>
+<span class="section-tag">Où cela a commencé</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">RECHERCHE.</h2>
+<p class="arc-note reveal">[Placeholder — résumé de recherche à ajouter manuellement.]</p>
+</section>
 
-  <!-- 04 — MOODBOARDS -->
-  <section id="moodboards">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">04 — Moodboards</span>
-      <span class="section-tag">Références assemblées</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">MOODBOARDS.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
-      <div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Moodboard tile</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Moodboard tile</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Moodboard tile</span></span></div>
-    </div>
-  </section>
+<!-- 04 — MOODBOARDS -->
+<section id="moodboards">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">04 — Moodboards</span>
+<span class="section-tag">Références assemblées</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">MOODBOARDS.</h2>
+<div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
+<div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Moodboard tile</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Moodboard tile</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Moodboard tile</span></span></div>
+</div>
+</section>
 
-  <!-- 05 — VISUAL REFERENCES -->
-  <section id="visual-references">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">05 — Références Visuelles</span>
-      <span class="section-tag">Matériel source externe</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">RÉFÉRENCES<br>VISUELLES.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Reference image</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Reference image</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Reference image</span></span></div>
-    </div>
-  </section>
+<!-- 05 — VISUAL REFERENCES -->
+<section id="visual-references">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">05 — Références Visuelles</span>
+<span class="section-tag">Matériel source externe</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">RÉFÉRENCES<br>VISUELLES.</h2>
+<div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
+<div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Reference image</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Reference image</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Reference image</span></span></div>
+</div>
+</section>
 
-  <!-- 06 — FIELD NOTES -->
-  <section id="field-notes">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">06 — Notes de Terrain</span>
-      <span class="section-tag">Observé dans le monde</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">NOTES DE<br>TERRAIN.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:2;">
-      <div class="archive-placeholder" style="--ph-ratio:3/4;"><div class="ph-meta"><span class="ph-ratio">3:4</span></div><span class="ph-suggested">Suggested content<span>Field note scan</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:3/4;"><div class="ph-meta"><span class="ph-ratio">3:4</span></div><span class="ph-suggested">Suggested content<span>Field note scan</span></span></div>
-    </div>
-  </section>
+<!-- 06 — FIELD NOTES -->
+<section id="field-notes">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">06 — Notes de Terrain</span>
+<span class="section-tag">Observé dans le monde</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">NOTES DE<br>TERRAIN.</h2>
+<div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:2;">
+<div class="archive-placeholder" style="--ph-ratio:3/4;"><div class="ph-meta"><span class="ph-ratio">3:4</span></div><span class="ph-suggested">Suggested content<span>Field note scan</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:3/4;"><div class="ph-meta"><span class="ph-ratio">3:4</span></div><span class="ph-suggested">Suggested content<span>Field note scan</span></span></div>
+</div>
+</section>
 
-  <!-- 07 — NOTEBOOK PAGES -->
-  <section id="notebook-pages">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">07 — Pages de Carnet</span>
-      <span class="section-tag">Pages de travail brutes</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">PAGES DE<br>CARNET.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
-      <div class="archive-placeholder" style="--ph-ratio:3/4;"><div class="ph-meta"><span class="ph-ratio">3:4</span></div><span class="ph-suggested">Suggested content<span>Notebook page scan</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:3/4;"><div class="ph-meta"><span class="ph-ratio">3:4</span></div><span class="ph-suggested">Suggested content<span>Notebook page scan</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:3/4;"><div class="ph-meta"><span class="ph-ratio">3:4</span></div><span class="ph-suggested">Suggested content<span>Notebook page scan</span></span></div>
-    </div>
-  </section>
+<!-- 07 — TYPOGRAPHY EXPLORATION -->
+<section id="typography-exploration">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">09 — Exploration Typographique</span>
+<span class="section-tag">Marques et lettrage</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">EXPLORATION<br>TYPOGRAPHIQUE.</h2>
+<div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:2;">
+<div class="archive-placeholder" style="--ph-ratio:16/9;"><div class="ph-meta"><span class="ph-ratio">16:9</span></div><span class="ph-suggested">Suggested content<span>Type study</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:16/9;"><div class="ph-meta"><span class="ph-ratio">16:9</span></div><span class="ph-suggested">Suggested content<span>Type study</span></span></div>
+</div>
+</section>
 
-  <!-- 08 — SKETCHES -->
-  <section id="sketches">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">08 — Esquisses</span>
-      <span class="section-tag">Premières formes</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">ESQUISSES.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Sketch</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Sketch</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Sketch</span></span></div>
-    </div>
-  </section>
+<!-- 08 — REJECTED CONCEPTS -->
+<section id="rejected-concepts">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">10 — Concepts Rejetés</span>
+<span class="section-tag">Ce qui a été écarté</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">CONCEPTS<br>REJETÉS.</h2>
+<div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:2;">
+<div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Rejected concept</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Rejected concept</span></span></div>
+</div>
+</section>
 
-  <!-- 09 — TYPOGRAPHY EXPLORATION -->
-  <section id="typography-exploration">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">09 — Exploration Typographique</span>
-      <span class="section-tag">Marques et lettrage</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">EXPLORATION<br>TYPOGRAPHIQUE.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:2;">
-      <div class="archive-placeholder" style="--ph-ratio:16/9;"><div class="ph-meta"><span class="ph-ratio">16:9</span></div><span class="ph-suggested">Suggested content<span>Type study</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:16/9;"><div class="ph-meta"><span class="ph-ratio">16:9</span></div><span class="ph-suggested">Suggested content<span>Type study</span></span></div>
-    </div>
-  </section>
+<!-- BAND — chapter 3 -->
+<div class="texture-band texture-band--mid tx-shadow reveal">
+<div class="band-ghost band-ghost--center">CONSTRUCTION</div>
+<div class="band-cross"></div>
+<div class="band-label">Chapitre III — Matière &amp; Construction</div>
+<div class="band-label-r">↓ Construction</div>
+</div>
 
-  <!-- 10 — REJECTED CONCEPTS -->
-  <section id="rejected-concepts">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">10 — Concepts Rejetés</span>
-      <span class="section-tag">Ce qui a été écarté</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">CONCEPTS<br>REJETÉS.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:2;">
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Rejected concept</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Rejected concept</span></span></div>
-    </div>
-  </section>
+<!-- 11 — MATERIAL STUDIES -->
+<section id="construction">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">11 — Études de Matière</span>
+<span class="section-tag">Tissu et finition</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">ÉTUDES DE<br>MATIÈRE.</h2>
+<div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
+<div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Fabric swatch</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Fabric swatch</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Fabric swatch</span></span></div>
+</div>
+</section>
 
-  <!-- BAND — chapter 3 -->
-  <div class="texture-band texture-band--mid tx-shadow reveal">
-    <div class="band-ghost band-ghost--center">CONSTRUCTION</div>
-    <div class="band-cross"></div>
-    <div class="band-label">Chapitre III — Matière &amp; Construction</div>
-    <div class="band-label-r">↓ Construction</div>
-  </div>
+<!-- 14 — PROTOTYPE EVOLUTION -->
+<section id="prototype-evolution">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">14 — Évolution du Prototype</span>
+<span class="section-tag">Du premier au final</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">ÉVOLUTION DU<br>PROTOTYPE.</h2>
+<div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
+<div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Prototype</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Prototype</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Prototype</span></span></div>
+</div>
+</section>
 
-  <!-- 11 — MATERIAL STUDIES -->
-  <section id="construction">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">11 — Études de Matière</span>
-      <span class="section-tag">Tissu et finition</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">ÉTUDES DE<br>MATIÈRE.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
-      <div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Fabric swatch</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Fabric swatch</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Fabric swatch</span></span></div>
-    </div>
-  </section>
+<!-- BAND — chapter 4 -->
+<div class="texture-band texture-band--mid tx-shadow reveal">
+<div class="band-ghost band-ghost--center">RELEASE</div>
+<div class="band-cross"></div>
+<div class="band-label">Chapitre IV — Production &amp; Sortie</div>
+<div class="band-label-r">↓ Sortie</div>
+</div>
 
-  <!-- 12 — CONSTRUCTION PROCESS -->
-  <section id="construction-process">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">12 — Processus de Construction</span>
-      <span class="section-tag">Comment cela a été fait</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">PROCESSUS DE<br>CONSTRUCTION.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Construction step</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Construction step</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Construction step</span></span></div>
-    </div>
-  </section>
+<!-- 16 — LOOKBOOK (reuses site-wide .lookbook-* classes) -->
+<section id="lookbook">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">16 — Lookbook</span>
+<span class="section-tag">Le registre</span>
+</div>
+<h2 class="lookbook-headline reveal reveal-d1">LOOKBOOK.</h2>
+<div class="lookbook-grid reveal reveal-d2">
+<div class="lb-cell"><img class="lb-img" src="../../images/muerted-zephyr.png" alt="Muerted Zephyr"><div class="lb-label">Muerted Zephyr</div></div>
+<div class="lb-cell"><img class="lb-img" src="../../images/front-tee-1.png" alt="Front Tee 1"><div class="lb-label">Front Tee 1</div></div>
+<div class="lb-cell"><img class="lb-img" src="../../images/full-look-1.png" alt="Full Look 1"><div class="lb-label">Full Look 1</div></div>
+<div class="lb-cell"><img class="lb-img" src="../../THE GAZE 222222.png" alt="The Gaze"><div class="lb-label">The Gaze</div></div>
+<div class="lb-cell"><img class="lb-img" src="../../images/front-tee-2.png" alt="Front Tee 2"><div class="lb-label">Front Tee 2</div></div>
+<div class="lb-cell"><img class="lb-img" src="../../images/full-look-2.png" alt="Full Look 2"><div class="lb-label">Full Look 2</div></div>
+</div>
+</section>
 
-  <!-- 13 — WORKSPACE -->
-  <section id="workspace">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">13 — Atelier</span>
-      <span class="section-tag">Où cela s'est passé</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">ATELIER.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:2;">
-      <div class="archive-placeholder" style="--ph-ratio:3/2;"><div class="ph-meta"><span class="ph-ratio">3:2</span></div><span class="ph-suggested">Suggested content<span>Workspace</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:3/2;"><div class="ph-meta"><span class="ph-ratio">3:2</span></div><span class="ph-suggested">Suggested content<span>Workspace</span></span></div>
-    </div>
-  </section>
+<!-- 18 — PACKAGING -->
+<section id="packaging">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">18 — Packaging</span>
+<span class="section-tag">Comment cela arrive</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">PACKAGING.</h2>
+<div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:2;">
+<div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Packaging</span></span></div>
+<div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Packaging</span></span></div>
+</div>
+<!-- Discreet cross-reference to STORE — see brief's "STORE
+     RELATIONSHIP". Keep this as the only mention of purchase
+     on the entire page. -->
+<div class="arc-status-block reveal reveal-d3">
+<div class="arc-status-label">Statut<strong>En ligne — Run limité</strong></div>
+<a href="https://zumaurbanwear.store/" class="link-btn" target="_blank" rel="noopener">Voir l'Objet →</a>
+</div>
+</section>
 
-  <!-- 14 — PROTOTYPE EVOLUTION -->
-  <section id="prototype-evolution">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">14 — Évolution du Prototype</span>
-      <span class="section-tag">Du premier au final</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">ÉVOLUTION DU<br>PROTOTYPE.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Prototype</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Prototype</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Prototype</span></span></div>
-    </div>
-  </section>
+<!-- BAND — chapter 5 -->
+<div class="texture-band texture-band--mid tx-shadow reveal">
+<div class="band-ghost band-ghost--center">REFERENCES</div>
+<div class="band-cross"></div>
+<div class="band-label">Chapitre V — Référence Croisée</div>
+<div class="band-label-r">↓ Références</div>
+</div>
 
-  <!-- BAND — chapter 4 -->
-  <div class="texture-band texture-band--mid tx-shadow reveal">
-    <div class="band-ghost band-ghost--center">RELEASE</div>
-    <div class="band-cross"></div>
-    <div class="band-label">Chapitre IV — Production &amp; Sortie</div>
-    <div class="band-label-r">↓ Sortie</div>
-  </div>
+<!-- 20 — ARCHIVE REFERENCES -->
+<section id="references">
+<div class="section-meta reveal">
+<span class="section-num arc-chapter-index">20 — Références d'Archive</span>
+<span class="section-tag">Entrées liées</span>
+</div>
+<h2 class="arc-headline reveal reveal-d1">RÉFÉRENCES<br>D'ARCHIVE.</h2>
+<div class="reveal reveal-d2">
+<div class="archive-doc-row"><span class="doc-id">[00X]</span><span class="doc-title">[Nom de collection ou d'entrée liée]</span><span class="doc-status">[Statut]</span></div>
+<div class="archive-doc-row"><span class="doc-id">[00X]</span><span class="doc-title">[Nom de collection ou d'entrée liée]</span><span class="doc-status">[Statut]</span></div>
+</div>
+</section>
 
-  <!-- 15 — PRODUCTION -->
-  <section id="release">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">15 — Production</span>
-      <span class="section-tag">Rendu réel</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">PRODUCTION.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Production</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Production</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Production</span></span></div>
-    </div>
-  </section>
-
-  <!-- 16 — LOOKBOOK (reuses site-wide .lookbook-* classes) -->
-  <section id="lookbook">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">16 — Lookbook</span>
-      <span class="section-tag">Le registre</span>
-    </div>
-    <h2 class="lookbook-headline reveal reveal-d1">LOOKBOOK.</h2>
-    <div class="lookbook-grid reveal reveal-d2">
-      <div class="lb-cell"><img class="lb-img" src="../../images/muerted-zephyr.png" alt="Muerted Zephyr"><div class="lb-label">Muerted Zephyr</div></div>
-      <div class="lb-cell"><img class="lb-img" src="../../images/front-tee-1.png" alt="Front Tee 1"><div class="lb-label">Front Tee 1</div></div>
-      <div class="lb-cell"><img class="lb-img" src="../../images/full-look-1.png" alt="Full Look 1"><div class="lb-label">Full Look 1</div></div>
-      <div class="lb-cell"><img class="lb-img" src="../../THE GAZE 222222.png" alt="The Gaze"><div class="lb-label">The Gaze</div></div>
-      <div class="lb-cell"><img class="lb-img" src="../../images/front-tee-2.png" alt="Front Tee 2"><div class="lb-label">Front Tee 2</div></div>
-      <div class="lb-cell"><img class="lb-img" src="../../images/full-look-2.png" alt="Full Look 2"><div class="lb-label">Full Look 2</div></div>
-    </div>
-  </section>
-
-  <!-- 17 — CAMPAIGN -->
-  <section id="campaign">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">17 — Campagne</span>
-      <span class="section-tag">Comment cela a été annoncé</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">CAMPAGNE.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Campaign</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Campaign</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Campaign</span></span></div>
-    </div>
-  </section>
-
-  <!-- 18 — PACKAGING -->
-  <section id="packaging">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">18 — Packaging</span>
-      <span class="section-tag">Comment cela arrive</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">PACKAGING.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:2;">
-      <div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Packaging</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:1/1;"><div class="ph-meta"><span class="ph-ratio">1:1</span></div><span class="ph-suggested">Suggested content<span>Packaging</span></span></div>
-    </div>
-  </section>
-
-  <!-- 19 — FINAL OBJECTS -->
-  <section id="final-objects">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">19 — Objets Finaux</span>
-      <span class="section-tag">L'entrée complétée</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">OBJETS<br>FINAUX.</h2>
-    <div class="archive-placeholder-grid reveal reveal-d2" style="--ph-cols:3;">
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Final object</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Final object</span></span></div>
-      <div class="archive-placeholder" style="--ph-ratio:4/5;"><div class="ph-meta"><span class="ph-ratio">4:5</span></div><span class="ph-suggested">Suggested content<span>Final object</span></span></div>
-    </div>
-
-    <!-- Discreet cross-reference to STORE — see brief's "STORE
-         RELATIONSHIP". Keep this as the only mention of purchase
-         on the entire page. -->
-    <div class="arc-status-block reveal reveal-d3">
-      <div class="arc-status-label">Statut<strong>En ligne — Run limité</strong></div>
-      <a href="https://zumaurbanwear.store/" class="link-btn" target="_blank" rel="noopener">Voir l'Objet →</a>
-    </div>
-  </section>
-
-  <!-- BAND — chapter 5 -->
-  <div class="texture-band texture-band--mid tx-shadow reveal">
-    <div class="band-ghost band-ghost--center">REFERENCES</div>
-    <div class="band-cross"></div>
-    <div class="band-label">Chapitre V — Référence Croisée</div>
-    <div class="band-label-r">↓ Références</div>
-  </div>
-
-  <!-- 20 — ARCHIVE REFERENCES -->
-  <section id="references">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">20 — Références d'Archive</span>
-      <span class="section-tag">Entrées liées</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">RÉFÉRENCES<br>D'ARCHIVE.</h2>
-    <div class="reveal reveal-d2">
-      <div class="archive-doc-row"><span class="doc-id">[00X]</span><span class="doc-title">[Nom de collection ou d'entrée liée]</span><span class="doc-status">[Statut]</span></div>
-      <div class="archive-doc-row"><span class="doc-id">[00X]</span><span class="doc-title">[Nom de collection ou d'entrée liée]</span><span class="doc-status">[Statut]</span></div>
-    </div>
-  </section>
-
-  <!-- 21 — RELATED DOCUMENTS -->
-  <section id="related-documents">
-    <div class="section-meta reveal">
-      <span class="section-num arc-chapter-index">21 — Documents Liés</span>
-      <span class="section-tag">Hors de ce volume</span>
-    </div>
-    <h2 class="arc-headline reveal reveal-d1">DOCUMENTS<br>LIÉS.</h2>
-    <div class="reveal reveal-d2">
-      <div class="archive-doc-row"><span class="doc-id">[00X]</span><span class="doc-title">[Titre de presse, crédit ou document externe]</span><span class="doc-status">[Statut]</span></div>
-    </div>
-  </section>
-
-  <!-- BACK TO INDEX -->
-  <div class="arc-return reveal">
-    <p>Ceci est l'Archive de Collection Drop 001. Ce n'est pas la boutique.</p>
-    <a href="../../index.html#collections" class="link-btn">← Retour à l'Index</a>
-  </div>
+<!-- BACK TO INDEX -->
+<div class="arc-return reveal">
+<p>Ceci est l'Archive de Collection Drop 001. Ce n'est pas la boutique.</p>
+<a href="../../index.html#collections" class="link-btn">← Retour à l'Index</a>
+</div>
 
 </main>
-
 <footer class="reveal">
-  <div class="footer-bg-grad"></div>
-  <div class="footer-brand">
-    ZÜMA
-    <span>Design Index — Tous Droits Réservés</span>
-  </div>
-  <div class="footer-right">
-    <div class="social-links">
-      <a href="https://www.instagram.com/zumaurbanwear?igsh=MWdtNWJkbHEwOHBhdQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@zumaurbanwear?is_from_webapp=1&sender_device=pc" target="_blank" style="color:var(--grey-mid); font-size:7px;">TikTok</a>
-      <a href="https://wa.me/message/KOH2ZXZY6EPHP1" target="_blank" style="color:var(--grey-mid); font-size:7px;">WhatsApp</a>
-    </div>
-    <p class="footer-note">Ceci n'est pas la boutique.</p>
-  </div>
+<div class="footer-bg-grad"></div>
+<div class="footer-brand">
+ZÜMA
+<span>Design Index — Tous Droits Réservés</span>
+</div>
+<div class="footer-right">
+<div class="social-links">
+<a href="https://www.instagram.com/zumaurbanwear?igsh=MWdtNWJkbHEwOHBhdQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@zumaurbanwear?is_from_webapp=1&sender_device=pc" target="_blank" style="color:var(--grey-mid); font-size:7px;">TikTok</a>
+<a href="https://wa.me/message/KOH2ZXZY6EPHP1" target="_blank" style="color:var(--grey-mid); font-size:7px;">WhatsApp</a>
+</div>
+<p class="footer-note">Ceci n'est pas la boutique.</p>
+</div>
 </footer>
-
 <script src="../../scripts/core/loader.js"></script>
 <script src="../../scripts/animations/reveal.js"></script>
 </body>
