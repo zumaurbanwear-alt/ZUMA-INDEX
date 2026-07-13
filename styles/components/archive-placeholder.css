@@ -67,6 +67,19 @@
   color: var(--grey-text);
 }
 
+/* Real photo layer — sits inside each .archive-placeholder tile.
+   Empty/missing file → onerror hides it, tile shows as before.
+   Real file present at the same path → covers the tile completely,
+   ph-meta/ph-suggested/crosshair sit behind it (z-index 2 < photo). */
+.ph-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+
 /* Text-only variant for Archive References / Related Documents —
    a document row rather than an image tile. */
 .archive-doc-row {
